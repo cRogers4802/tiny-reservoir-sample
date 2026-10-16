@@ -46,3 +46,10 @@ not a uniform draw from the prefix.
   items in stream order — no padding with `undefined`, because `undefined`
 is a legitimate stream value in JavaScript and padding would be ambiguous.
 - `sample()` returns a shallow copy; mutating it does not affect the sampler.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
