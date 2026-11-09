@@ -1,6 +1,6 @@
 {
   "name": "tiny-reservoir-sample",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Uniform random sampling from arbitrary-length streams using Algorithm R",
   "type": "module",
   "main": "src/index.js",
